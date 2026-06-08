@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Sebo Universitario - Lint" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/sebo-universitario/package.json" />
+    <command value="run-script" />
+    <scripts>
+      <script value="lint" />
+    </scripts>
+    <node-interpreter value="project" />
+    <package-manager value="bun" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>
