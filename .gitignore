@@ -5,3 +5,4 @@ dist
 .idea/*
 !.idea/runConfigurations/
 !.idea/runConfigurations/*.xml
+.myollamaenhancer
