@@ -12,6 +12,7 @@ A aplicação possui:
 - Modo demonstração para teste local sem credenciais Firebase.
 - Banco PostgreSQL em Docker Compose.
 - CRUD completo de livros por usuário logado.
+- Swagger/OpenAPI disponível em `/api-docs`.
 
 ## 2. Arquitetura
 
@@ -141,6 +142,13 @@ GET    /api/livros
 POST   /api/livros
 PUT    /api/livros/:id
 DELETE /api/livros/:id
+```
+
+### Documentação interativa
+
+```txt
+GET /api-docs
+GET /api-docs/openapi.json
 ```
 
 ## 7. Como rodar

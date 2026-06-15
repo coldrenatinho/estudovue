@@ -13,11 +13,13 @@ A API é responsável por autenticar usuários, validar tokens, expor endpoints 
 - JWT via `jsonwebtoken`.
 - Firebase Admin para validar ID token emitido pelo Firebase Authentication.
 - Helmet, CORS e Morgan.
+- Swagger/OpenAPI para documentação interativa.
 
 ## Arquivos principais
 
 ```txt
 api/src/server.ts
+api/src/openapi.ts
 api/src/db.ts
 api/src/routes/auth.ts
 api/src/routes/livros.ts
@@ -38,10 +40,11 @@ Responsabilidades:
 1. Carregar variáveis de ambiente.
 2. Configurar middlewares.
 3. Criar rota `/health`.
-4. Registrar rotas `/api/auth` e `/api/livros`.
-5. Esperar PostgreSQL ficar disponível.
-6. Criar tabelas se não existirem.
-7. Subir servidor na porta 4000.
+4. Expor `/api-docs` e `/api-docs/openapi.json`.
+5. Registrar rotas `/api/auth` e `/api/livros`.
+6. Esperar PostgreSQL ficar disponível.
+7. Criar tabelas se não existirem.
+8. Subir servidor na porta 4000.
 
 ## Autenticação
 
@@ -113,6 +116,17 @@ DELETE /api/livros/:id
 
 Todas exigem autenticação.
 
+## Swagger / OpenAPI
+
+Endpoints:
+
+```txt
+GET /api-docs
+GET /api-docs/openapi.json
+```
+
+O arquivo `api/src/openapi.ts` concentra o contrato da API.
+
 ## Regras de segurança importantes
 
 - O backend sempre filtra livros por `user_id`.
@@ -131,6 +145,8 @@ Todas exigem autenticação.
 - [ ] Validação rejeita ano inválido.
 - [ ] Validação rejeita preço negativo.
 - [ ] Build TypeScript passa.
+- [ ] `/api-docs` abre no navegador.
+- [ ] `/api-docs/openapi.json` retorna o contrato OpenAPI.
 
 ## Comandos úteis
 

@@ -3,6 +3,7 @@ import express from 'express'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { esperarBanco, iniciarBanco, pool } from './db.js'
+import { openApiSpec, swaggerHtml } from './openapi.js'
 import authRoutes from './routes/auth.js'
 import livrosRoutes from './routes/livros.js'
 import 'dotenv/config'
@@ -35,6 +36,14 @@ app.get('/health', async (_req, res) => {
 
 app.get('/api', (_req, res) => {
   res.json({ name: 'Sebo Universitário API', version: '1.0.0' })
+})
+
+app.get('/api-docs', (_req, res) => {
+  res.type('html').send(swaggerHtml())
+})
+
+app.get('/api-docs/openapi.json', (_req, res) => {
+  res.json(openApiSpec)
 })
 
 app.use('/api/auth', authRoutes)

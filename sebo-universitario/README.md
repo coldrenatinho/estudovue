@@ -6,6 +6,7 @@ Projeto acadêmico fullstack para gerenciar livros usados em um sebo universitá
 
 - Frontend: Vue 3, Vite, Vuetify, Vue Router e Pinia
 - Backend: Node.js, Express, JWT e Firebase Admin
+- Documentação da API: Swagger/OpenAPI em `/api-docs`
 - Banco de dados: PostgreSQL
 - Infra local: Docker Compose com serviços `web`, `api` e `db`
 
