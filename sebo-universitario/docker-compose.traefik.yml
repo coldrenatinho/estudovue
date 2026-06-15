@@ -1,17 +1,4 @@
 services:
-  api:
-    ports: !reset []
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=${TRAEFIK_NETWORK:-traefik}"
-      - "traefik.http.routers.${TRAEFIK_API_ROUTER:-sebo-api}.rule=Host(`${API_DOMAIN}`)"
-      - "traefik.http.routers.${TRAEFIK_API_ROUTER:-sebo-api}.entrypoints=${TRAEFIK_ENTRYPOINT:-websecure}"
-      - "traefik.http.routers.${TRAEFIK_API_ROUTER:-sebo-api}.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-letsencrypt}"
-      - "traefik.http.services.${TRAEFIK_API_SERVICE:-sebo-api}.loadbalancer.server.port=4000"
-    networks:
-      - default
-      - traefik
-
   web:
     ports: !reset []
     labels:

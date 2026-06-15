@@ -127,6 +127,9 @@ GET /api-docs/openapi.json
 
 O arquivo `api/src/openapi.ts` concentra o contrato da API.
 
+Em produção, esses caminhos podem ser acessados pelo mesmo domínio do frontend,
+porque o Nginx do `web` faz proxy interno para `api`.
+
 ## Regras de segurança importantes
 
 - O backend sempre filtra livros por `user_id`.

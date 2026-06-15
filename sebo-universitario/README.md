@@ -89,11 +89,10 @@ cp .env.example .env
 No `.env`, preencha pelo menos:
 
 ```env
-APP_DOMAIN=sebo.seudominio.com.br
-API_DOMAIN=api-sebo.seudominio.com.br
+APP_DOMAIN=sebo.nortemtsistemas.com.br
 JWT_SECRET=troque-por-um-segredo-forte
 POSTGRES_PASSWORD=troque-por-uma-senha-forte
-CORS_ORIGIN=https://sebo.seudominio.com.br,https://api-sebo.seudominio.com.br
+CORS_ORIGIN=https://sebo.nortemtsistemas.com.br
 TRAEFIK_NETWORK=traefik
 TRAEFIK_ENTRYPOINT=websecure
 TRAEFIK_CERT_RESOLVER=letsencrypt
