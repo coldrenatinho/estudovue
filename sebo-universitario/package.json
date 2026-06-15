@@ -10,14 +10,19 @@
     "build-only": "bun ./node_modules/vite/bin/vite.js build",
     "type-check": "bun ./node_modules/vue-tsc/bin/vue-tsc.js --build --force",
     "lint": "bun ./node_modules/eslint/bin/eslint.js",
-    "lint:fix": "bun ./node_modules/eslint/bin/eslint.js --fix"
+    "lint:fix": "bun ./node_modules/eslint/bin/eslint.js --fix",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "api:dev": "cd api && bun install && bun run dev"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.10",
     "@mdi/font": "7.4.47",
+    "firebase": "^12.6.0",
+    "pinia": "^3.0.4",
     "vue": "^3.5.30",
-    "vuetify": "^4.0.2",
-    "vue-router": "^5.0.3"
+    "vue-router": "^5.0.3",
+    "vuetify": "^4.0.2"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",

@@ -1,17 +1,19 @@
-import router from '../router';
 /**
  * plugins/index.ts
  *
- * Automatically included in `./src/main.ts`
+ * Registra Vuetify, Pinia e Vue Router na aplicação.
  */
 
-// Types
 import type { App } from 'vue'
+import { createPinia } from 'pinia'
 
-// Plugins
+import router from '../router'
 import vuetify from './vuetify'
 
+const pinia = createPinia()
+
 export function registerPlugins (app: App) {
- app.use(vuetify)
- app.use(router);
+  app.use(pinia)
+  app.use(vuetify)
+  app.use(router)
 }

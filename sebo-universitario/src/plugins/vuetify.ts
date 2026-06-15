@@ -1,19 +1,31 @@
 /**
  * plugins/vuetify.ts
  *
- * Framework documentation: https://vuetifyjs.com`
+ * Tema visual personalizado do Sebo Universitário.
  */
 
-// Composables
 import { createVuetify } from 'vuetify'
-// Styles
 import '@mdi/font/css/materialdesignicons.css'
-
 import 'vuetify/styles'
 
-// https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
-    defaultTheme: 'system',
+    defaultTheme: 'seboTheme',
+    themes: {
+      seboTheme: {
+        dark: false,
+        colors: {
+          background: '#FFF8E1',
+          surface: '#FFFFFF',
+          primary: '#6D4C41',
+          secondary: '#A1887F',
+          accent: '#D84315',
+          error: '#B00020',
+          info: '#1976D2',
+          success: '#2E7D32',
+          warning: '#F9A825',
+        },
+      },
+    },
   },
 })
