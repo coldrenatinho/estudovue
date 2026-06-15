@@ -110,6 +110,19 @@ git checkout develop
 git merge main
 ```
 
+## Automação
+
+O repositório usa GitHub Actions para validar a base automaticamente em `push`
+e `pull_request` nas branches `main` e `develop`.
+
+O workflow em `.github/workflows/ci.yml` executa:
+
+```txt
+frontend: bun install, bun run lint, bun run build
+api: bun install, bun run build
+compose: docker compose config --services
+```
+
 ## Antes de entregar
 
 Rodar:

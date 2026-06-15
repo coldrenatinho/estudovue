@@ -88,6 +88,12 @@ docs/                 Documentação técnica e agentes
 docs/skills/          Skills locais reutilizáveis do projeto
 ```
 
+Guia de Firebase:
+
+```txt
+docs/FIREBASE.md
+```
+
 ## 5. Modelo de dados
 
 ### users
@@ -210,7 +216,7 @@ Valide:
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.traefik.yml ps
-curl https://api-sebo.seudominio.com.br/health
+curl https://sebo.nortemtsistemas.com.br/health
 ```
 
 ## 8. Variáveis de ambiente
@@ -236,7 +242,6 @@ POSTGRES_PASSWORD=
 POSTGRES_DB=sebo_universitario
 CORS_ORIGIN=
 APP_DOMAIN=
-API_DOMAIN=
 TRAEFIK_NETWORK=traefik
 ```
 

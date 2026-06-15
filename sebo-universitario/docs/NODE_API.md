@@ -130,6 +130,14 @@ O arquivo `api/src/openapi.ts` concentra o contrato da API.
 Em produção, esses caminhos podem ser acessados pelo mesmo domínio do frontend,
 porque o Nginx do `web` faz proxy interno para `api`.
 
+## Firebase
+
+Para configurar o login real com Google e a validação do token no backend, veja:
+
+```txt
+docs/FIREBASE.md
+```
+
 ## Regras de segurança importantes
 
 - O backend sempre filtra livros por `user_id`.

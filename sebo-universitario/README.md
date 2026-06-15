@@ -30,6 +30,7 @@ A documentação técnica e os prompts dos agentes autônomos estão em:
 docs/README_TECNICO.md
 docs/FRONTEND.md
 docs/NODE_API.md
+docs/FIREBASE.md
 docs/DBA_POSTGRES.md
 docs/QA.md
 docs/GIT_WORKFLOW.md
@@ -115,7 +116,7 @@ Verifique:
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.traefik.yml ps
-curl https://api-sebo.seudominio.com.br/health
+curl https://sebo.nortemtsistemas.com.br/health
 ```
 
 Para atualizar depois de um novo commit:
