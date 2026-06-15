@@ -96,7 +96,7 @@ POSTGRES_PASSWORD=troque-por-uma-senha-forte
 CORS_ORIGIN=https://sebo.nortemtsistemas.com.br
 TRAEFIK_NETWORK=traefik
 TRAEFIK_ENTRYPOINT=websecure
-TRAEFIK_CERT_RESOLVER=letsencrypt
+TRAEFIK_CERT_RESOLVER=myresolver
 ENABLE_DEMO_LOGIN=false
 ```
 
