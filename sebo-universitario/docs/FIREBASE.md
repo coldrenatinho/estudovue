@@ -96,11 +96,11 @@ ENABLE_DEMO_LOGIN=true
 
 ## 7. Checklist rápido
 
-- [ ] Projeto Firebase criado.
-- [ ] Google habilitado no Authentication.
-- [ ] App Web criado.
-- [ ] Variáveis `VITE_FIREBASE_*` preenchidas.
-- [ ] Service account criada.
-- [ ] `FIREBASE_SERVICE_ACCOUNT_BASE64` ou `FIREBASE_*` do backend preenchidos.
-- [ ] `.env` não foi commitado.
+- [x] Projeto Firebase criado.
+- [x] Google habilitado no Authentication.
+- [x] App Web criado.
+- [x] Variáveis `VITE_FIREBASE_*` preenchidas.
+- [x] Service account criada.
+- [x] `FIREBASE_SERVICE_ACCOUNT_BASE64` ou `FIREBASE_*` do backend preenchidos.
+- [x] `.env` não foi commitado.
 
