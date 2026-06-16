@@ -54,6 +54,12 @@ services:
       - api
     ports:
       - "8080:80"
+    networks:
+      - traefik-public
 
 volumes:
   postgres_data:
+
+networks:
+  traefik-public:
+    external: true
