@@ -35,6 +35,9 @@ services:
         condition: service_healthy
     ports:
       - "4000:4000"
+    networks:
+      - default
+      - traefik-public
 
   web:
     build:
@@ -55,6 +58,7 @@ services:
     ports:
       - "8080:80"
     networks:
+      - default
       - traefik-public
 
 volumes:
